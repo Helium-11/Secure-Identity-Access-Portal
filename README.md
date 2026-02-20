@@ -1,4 +1,4 @@
-# User Management API
+# Secure identity access portal
 
 A full-stack web application demonstrating secure API development, identity provisioning, and activity auditing. Built with a Python (Flask) backend and a responsive Vanilla JavaScript frontend.
 
