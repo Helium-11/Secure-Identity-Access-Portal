@@ -16,7 +16,7 @@ app.config['SECRET_KEY'] = 'plschange'
 app.config['JWT_EXPIRATION_DELTA'] = timedelta(hours=24)
 
 # Configure CORS for frontend communication
-CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:5000", "http://127.0.0.1:5000", "file://"])
+CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:5000", "http://127.0.0.1:5000","https://helium-11.github.io", "file://"])
 
 # Initialize database
 db = UserDatabase()
@@ -437,3 +437,4 @@ if __name__ == '__main__':
     
 
     app.run(debug=True, host='0.0.0.0', port=5000, use_reloader=False)
+
