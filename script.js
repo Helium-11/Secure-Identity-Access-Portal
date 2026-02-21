@@ -1,5 +1,5 @@
 // API Configuration
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://secure-identity-access-portal.onrender.com/api';
 
 // Global State
 let currentUser = null;
@@ -569,4 +569,5 @@ function showEditModal(field, label, currentValue) {
 function hideEditModal() {
     elements.editModal.classList.add('hidden');
     elements.editForm.reset();
+
 }
