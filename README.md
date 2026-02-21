@@ -70,7 +70,8 @@ pip install -r requirements.txt
 cd backend
 python app.py
 ```
-Server will start at: http://localhost:5000
+<!-- Server will start at: http://localhost:5000 -->
+
 
 ### 3. Open Frontend
 ```bash
@@ -82,7 +83,7 @@ python -m http.server 3000
 open index.html  # macOS
 start index.html  # Windows
 ```
-Frontend will be available at: http://localhost:3000
+<!-- Frontend will be available at: http://localhost:3000 -->
 
 ## API Endpoints
 
