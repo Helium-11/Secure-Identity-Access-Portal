@@ -1,5 +1,5 @@
 // API Configuration
-const API_BASE_URL = 'https://secure-identity-access-portal.onrender.com';
+const API_BASE_URL = 'https://secure-identity-access-portal.onrender.com/api';
 
 // Global State
 let currentUser = null;
@@ -571,4 +571,5 @@ function hideEditModal() {
     elements.editForm.reset();
 
 }
+
 
