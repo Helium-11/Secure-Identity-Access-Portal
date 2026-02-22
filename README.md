@@ -70,7 +70,6 @@ pip install -r requirements.txt
 cd backend
 python app.py
 ```
-<!-- Server will start at: http://localhost:5000 -->
 
 
 ### 3. Open Frontend
@@ -139,31 +138,6 @@ const data = await response.json();
 const token = data.token; // Use for authenticated requests
 ```
 
-### Get User Profile
-```javascript
-const response = await fetch('http://localhost:5000/api/profile', {
-    headers: {
-        'Authorization': `Bearer ${token}`
-    }
-});
-
-const data = await response.json();
-```
-
-### Upload Avatar
-```javascript
-const formData = new FormData();
-formData.append('avatar', fileInput.files[0]);
-
-const response = await fetch('http://localhost:5000/api/upload-avatar', {
-    method: 'POST',
-    headers: {
-        'Authorization': `Bearer ${token}`
-    },
-    body: formData
-});
-```
-
 ##  Database Schema
 
 ### Users Table
@@ -223,50 +197,6 @@ CREATE TABLE server_logs (
 - **Input Sanitization** - XSS prevention
 - **File Type Validation** - Upload security
 - **Error Handling** - No sensitive data exposure
-
-## Testing the API
-
-### 1. Test with cURL
-```bash
-# Register
-curl -X POST http://localhost:5000/api/register \
-  -H "Content-Type: application/json" \
-  -d '{"username":"testuser","email":"test@example.com","password":"password123"}'
-
-# Login
-curl -X POST http://localhost:5000/api/login \
-  -H "Content-Type: application/json" \
-  -d '{"username":"testuser","password":"password123"}'
-
-# Get Profile (replace TOKEN with actual token)
-curl -X GET http://localhost:5000/api/profile \
-  -H "Authorization: Bearer TOKEN"
-```
-
-### 2. Test with Python
-```python
-import requests
-
-# Register
-response = requests.post('http://localhost:5000/api/register', json={
-    'username': 'pythonuser',
-    'email': 'python@example.com',
-    'password': 'python123'
-})
-print(response.json())
-
-# Login
-response = requests.post('http://localhost:5000/api/login', json={
-    'username': 'pythonuser',
-    'password': 'python123'
-})
-token = response.json()['token']
-
-# Get Profile
-response = requests.get('http://localhost:5000/api/profile', 
-                       headers={'Authorization': f'Bearer {token}'})
-print(response.json())
-```
 
 ## Learning Objectives
 
